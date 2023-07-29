@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.group("Menu");
+                console.log("1. Suma");
+                console.log("2. Resta");
+                console.log("3. Multiplicacion");
+                console.log("4. Division");
+                console.log("5. Salir");
+            console.groupEnd();
+            //Solicitar el numero de la operacion elegida
+            var operacion = prompt("Ingrese el numero de la operacion elegida");
+        //Iterar hasta que el usuario elija una opcion correcta
+        while(operacion > 0 || operacion <= 5){
+           // console.clear();
+            console.group("Menu");
+                console.log("1. Suma");
+                console.log("2. Resta");
+                console.log("3. Multiplicacion");
+                console.log("4. Division");
+                console.log("5. Salir");
+            console.groupEnd();
+            
+            //Si elige una opcion correcta, pedir dos numeros y mostrar el resultado de la operacion elegida
+            let numero1 = prompt("Ingrese el primer numero");
+            let numero2 = prompt("Ingrese el segundo numero");
+
+            //Convertir los numeros a enteros
+            numero1 = parseInt(numero1);
+            numero2 = parseInt(numero2);
+
+            let resultado = null;
+
+            //Mostrar el resultado de la operacion elegida
+            switch(operacion){
+                case "1":
+                    resultado = "La suma es: " + (numero1 + numero2);
+                    break;
+                case "2":
+                    resultado = "La resta es: " + (numero1 - numero2);
+                    break;
+                
+                    case "3":
+                    resultado = "La multiplicacion es: " + (numero1 * numero2);
+                    break;
+                case "4":
+                    resultado = "La division es: " + (numero1 / numero2);
+                    break;
+                default:
+                    console.log("Opcion incorrecta");
+                    break;
+            }
+            console.group("Resultado");
+                console.log(resultado);
+            console.groupEnd();
+
+            //Solicitar el numero de la operacion para continuar
+            var operacion = prompt("Ingrese el numero de la operacion elegida");
+            //Si elige la opcion 5, salir del programa
+            if(operacion == 5){
+                console.log("Gracias por usar el programa");
+                break;
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
+</html>
